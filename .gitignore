@@ -23,6 +23,8 @@
 hs_err_pid*
 
 .metadata
+node_modules
+_node_modules
 Servers
 target
 .settings
