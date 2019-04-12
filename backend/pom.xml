@@ -29,14 +29,6 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<meminitial>512m</meminitial>
 					<maxmem>1024m</maxmem>
-					<compilerArgs>
-						<arg>-Xlint:all</arg>
-						<arg>-Xlint:-processing</arg>
-						<arg>-Xlint:-path</arg>
-						<arg>-Werror</arg>
-					</compilerArgs>
-					<showWarnings>true</showWarnings>
-					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
 			<!-- Embedded Apache Tomcat required for testing web application -->
