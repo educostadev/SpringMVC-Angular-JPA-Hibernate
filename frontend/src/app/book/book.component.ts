@@ -37,7 +37,11 @@ export class BookComponent implements OnInit, OnChanges{
     addBook(): void{
         console.log("inside the addBook()::::::")
         this._bookService.addBook(this.book)
-            .subscribe((response) => {console.log(response); this.getBooks();this.reset();},
+            .subscribe((response) => {
+                console.log(response);
+                this.getBooks();
+                this.reset();
+            },
             (error) =>{
                 console.log(error);
                 this.statusMessage = "Problem with service. Please try again later!";
@@ -47,6 +51,22 @@ export class BookComponent implements OnInit, OnChanges{
         console.log("end of addBook()::::");
         //this._router.navigate(['/books']);
     }
+
+    deleteBook(bookId: string) {
+        console.log("Inside the deleteBook()::::Book id::::" + bookId);
+        this._bookService.deleteBook(bookId)
+            .subscribe((response) => {
+                console.log(response);
+                this.getBooks();
+            },
+                (error) => {
+                    console.log(error);
+                    this.statusMessage = "Problem with service. Please try again later!";
+                });
+        this.reset();
+        console.log("end of deleteBook():::::::");
+    }
+
 
     private reset(){
         console.log("inside the reset():::::::");
@@ -58,18 +78,6 @@ export class BookComponent implements OnInit, OnChanges{
 
     ngOnChanges(changes:any) {
         console.log("calling ngOnChanges()::::::::");
-    }
-
-    deleteBook(bookId: string){
-        console.log("Inside the deleteBook()::::Book id::::"+bookId);
-        this._bookService.deleteBook(bookId)
-            .subscribe((response) => {console.log(response); this.getBooks();},
-            (error) =>{
-                console.log(error);
-                this.statusMessage = "Problem with service. Please try again later!";
-            });
-            this.reset();
-            console.log("end of deleteBook():::::::");
     }
 
     getBook(bookId: string){

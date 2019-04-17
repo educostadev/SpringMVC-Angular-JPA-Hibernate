@@ -1,5 +1,5 @@
-import { Injectable, OnInit } from '@angular/core';
-import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from "rxjs/operators";
 import { filter } from "rxjs/operators";
@@ -11,11 +11,8 @@ import { Book } from './book';
 
 
 @Injectable()
-export class BookService implements OnInit {
+export class BookService {
 
-    ngOnInit(): void {
-        console.log(this.getAllBooks());
-    }
 
 
     constructor(private _httpService: HttpClient) { }
