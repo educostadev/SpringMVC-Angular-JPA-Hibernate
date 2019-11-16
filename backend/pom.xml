@@ -87,6 +87,12 @@
 			<version>12.2.0.1</version>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- sql server support -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>7.0.0.jre8</version>
+		</dependency>
 		<!-- Jackson API for JSON -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
