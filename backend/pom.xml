@@ -10,7 +10,7 @@
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<spring.version>4.3.10.RELEASE</spring.version>
-		<hibernate.version>5.2.11.Final</hibernate.version>
+		<hibernate.version>5.3.20.Final</hibernate.version>
 		<source-code>1.8</source-code>
 	</properties>
 
